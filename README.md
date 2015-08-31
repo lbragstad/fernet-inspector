@@ -27,6 +27,6 @@ the resulting payload:
 ```
 
 Now you can map to the appropriate payload based on the first element of the
-payload. The first element is `2` in this case, which means we are dealing with
-a `ProjectScopedPayload` of the
+payload, which is the token `version`. The first element is `2` in this case,
+which means we are dealing with a `ProjectScopedPayload` of the
 `keystone.token.providers.fernet.token_formatter.py:TokenFormatter` class.

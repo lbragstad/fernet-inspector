@@ -30,7 +30,7 @@ payload:
 .. code:: bash
 
     >>> fernet-inspector <token-to-decrypt>
-    [2, 'b03ed914036b46b394c940419e12da0f', 1, '5aced855355a48f6aed86e403b9a9860', 1442335932.57696, ['\x80w\x02D\x1a\xa4M\xec\xb2\xea\nB\x87\x86\x14\x18']]
+    [2, '\xb0>\xd9\x14\x03kF\xb3\x94\xc9@A\x9e\x12\xda\x0f', 1, 'Z\xce\xd8U5ZH\xf6\xae\xd8n@;\x9a\x98`', 1442338543.238753, ['\xf0\xa8\x03T\x07\xbaJk\x8c;G\x9cG\xab\xdfX']]
 
 This tool is only meant to supply information about a token. It's not intended
 to make assumptions about a particular token format in Keystone, or assertions

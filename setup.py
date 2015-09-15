@@ -24,7 +24,7 @@ setup(
             'fernet-inspector = fernet_inspector.cli:main'
         ]
     },
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     author='Lance Bragstad',
     author_email='lbragstad@gmail.com',
     url='https://github.com/lbragstad/fernet-inspector',

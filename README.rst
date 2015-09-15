@@ -5,6 +5,13 @@ fernet-inspector
 A tool for inspecting the contents of a Fernet token, local to the server it
 was generated from.
 
+Installation
+------------
+
+.. code:: bash
+
+    $ pip install fernet-inspector
+
 Usage
 -----
 

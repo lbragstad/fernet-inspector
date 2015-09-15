@@ -37,9 +37,9 @@ to make assumptions about a particular token format in Keystone, or assertions
 about the order in which the data was packed.
 
 Now you can map to the appropriate payload based on the first element of the
-payload, which is the token `version`. The first element is `2` in this case,
-which means we are dealing with a `ProjectScopedPayload` of the
-`keystone.token.providers.fernet.token_formatter.py:TokenFormatter` class. Note
+payload, which is the token ``version``. The first element is ``2`` in this case,
+which means we are dealing with a ``ProjectScopedPayload`` of the
+``keystone.token.providers.fernet.token_formatter.py:TokenFormatter`` class. Note
 that the last element of this particular token is a list. Keystone token
 formats uses lists for both audit IDs and group IDs. The audit ID, as keystone
 knows generates it, is done like:
@@ -49,14 +49,14 @@ knows generates it, is done like:
     base64.urlsafe_b64encode(uuid.uuid4().bytes)[:-2]
 
 Where the group IDs within a list are converted to bytes. When the
-`fernet_inspector` tool encounters a list of values in the payload, it leaves
+``fernet_inspector`` tool encounters a list of values in the payload, it leaves
 the values as is. This tool doesn't know enough context about the order in
 which Keystone packs tokens to make accurate assumptions about how to organize
-the data. This would require `fernet_inspector` to track upstream Keystone
-token formats in order to operated effectively. Instead, `fernet_inspector`
+the data. This would require ``fernet_inspector`` to track upstream Keystone
+token formats in order to operated effectively. Instead, ``fernet_inspector``
 will leave values packed in lists in their UUID byte format. The values can
-still be calculated based on the `UUID.byte` representation. For example,
-converting `UUID.byte` representation to a Keystone audit ID:
+still be calculated based on the ``UUID.bytes`` representation. For example,
+converting ``UUID.bytes`` representation to a Keystone audit ID:
 
 .. code:: bash
 
@@ -64,7 +64,7 @@ converting `UUID.byte` representation to a Keystone audit ID:
     >>> base64.urlsafe_b64encode('\x80w\x02D\x1a\xa4M\xec\xb2\xea\nB\x87\x86\x14\x18')
     'gHcCRBqkTeyy6gpCh4YUGA=='
 
-Converting `UUID.byte` representation to `UUID.hex` format:
+Converting ``UUID.bytes`` representation to ``UUID.hex`` format:
 
 .. code:: bash
 

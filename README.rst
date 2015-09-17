@@ -45,6 +45,7 @@ to make assumptions about a particular token format, or assertions about the
 order in which the data was packed.
 
 .. WARNING::
+
     The order and contents of any particular token format are subject to change
     at any time.
 
@@ -60,6 +61,7 @@ Audit IDs can be converted to their ``base64`` representation with the
 following:
 
 .. code:: bash
+
     >>> import base64
     >>> base64.urlsafe_b64encode('\xf0\xa8\x03T\x07\xbaJk\x8c;G\x9cG\xab\xdfX')
     '8KgDVAe6SmuMOecR6vfWA=='

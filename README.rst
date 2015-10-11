@@ -54,8 +54,8 @@ payload, which is the token ``version``. In this case, the first element is
 ``2``, which means we are dealing with a ``ProjectScopedPayload`` of the
 ``keystone.token.providers.fernet.token_formatter.py:TokenFormatter`` class.
 
-Handing Audit IDs
-~~~~~~~~~~~~~~~~~
+Handling Audit IDs
+~~~~~~~~~~~~~~~~~~
 
 Audit IDs can be converted to their ``base64`` representation with the
 following:
